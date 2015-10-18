@@ -3,4 +3,5 @@ class Election < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true
   validates :start_at, presence: true, uniqueness: true
   validates :end_at, presence: true, uniqueness: true
+  has_many :users
 end
