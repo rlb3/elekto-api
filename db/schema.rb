@@ -18,14 +18,14 @@ ActiveRecord::Schema.define(version: 20151018212204) do
 
   create_table "elections", force: :cascade do |t|
     t.string   "name"
-    t.integer  "owner_id"
     t.datetime "start_at"
     t.datetime "end_at"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "elections", ["owner_id"], name: "index_elections_on_owner_id", using: :btree
+  add_index "elections", ["user_id"], name: "index_elections_on_user_id", using: :btree
 
   create_table "oauth_access_grants", force: :cascade do |t|
     t.integer  "resource_owner_id", null: false
@@ -71,12 +71,9 @@ ActiveRecord::Schema.define(version: 20151018212204) do
     t.string   "email"
     t.string   "name"
     t.string   "password_digest"
-    t.integer  "election_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
 
-  add_index "users", ["election_id"], name: "index_users_on_election_id", using: :btree
-
-  add_foreign_key "users", "elections"
+  add_foreign_key "elections", "users"
 end
