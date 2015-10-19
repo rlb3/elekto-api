@@ -32,5 +32,9 @@ group :development, :test do
   gem 'apitome'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
 gem 'doorkeeper'
 gem 'jsonapi-resources'
