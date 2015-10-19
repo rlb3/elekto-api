@@ -1,0 +1,34 @@
+{
+  "resource": "Elections",
+  "http_method": "GET",
+  "route": "/v1/elections",
+  "description": "GET /v1/elections",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/elections",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":[{\"id\":\"133\",\"type\":\"elections\",\"links\":{\"self\":\"http://example.org/v1/elections/133\"},\"attributes\":{\"name\":\"Election 3\",\"start-at\":\"2015-10-19T00:50:41.238Z\",\"end-at\":\"2015-10-26T00:50:41.238Z\"},\"relationships\":{\"user\":{\"links\":{\"self\":\"http://example.org/v1/elections/133/relationships/user\",\"related\":\"http://example.org/v1/elections/133/user\"}}}},{\"id\":\"134\",\"type\":\"elections\",\"links\":{\"self\":\"http://example.org/v1/elections/134\"},\"attributes\":{\"name\":\"Election 4\",\"start-at\":\"2015-10-19T00:50:41.238Z\",\"end-at\":\"2015-10-26T00:50:41.238Z\"},\"relationships\":{\"user\":{\"links\":{\"self\":\"http://example.org/v1/elections/134/relationships/user\",\"related\":\"http://example.org/v1/elections/134/user\"}}}}]}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}
