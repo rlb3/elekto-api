@@ -30,7 +30,6 @@ group :development, :test do
   gem 'shoulda-matchers', '~> 3.0'
   gem 'factory_girl_rails'
   gem 'rspec_api_documentation'
-  gem 'apitome'
 end
 
 group :production do
@@ -39,3 +38,4 @@ end
 
 gem 'doorkeeper'
 gem 'jsonapi-resources'
+gem 'apitome'
