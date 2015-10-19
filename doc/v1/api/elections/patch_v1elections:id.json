@@ -1,0 +1,61 @@
+{
+  "resource": "Elections",
+  "http_method": "PATCH",
+  "route": "/v1/elections/:election_id",
+  "description": "PATCH /v1/elections/:id",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "      The id of the election.\n"
+    },
+    {
+      "required": true,
+      "name": "type",
+      "description": "      The type of the resource. Must be elections.\n"
+    },
+    {
+      "scope": "attributes",
+      "required": true,
+      "name": "name",
+      "description": "      The name of the election.\n"
+    },
+    {
+      "scope": "attributes",
+      "required": true,
+      "name": "start-at",
+      "description": "      Start of the Election\n"
+    },
+    {
+      "scope": "attributes",
+      "required": true,
+      "name": "end-at",
+      "description": "      End of the Elections\n"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PATCH",
+      "request_path": "/v1/elections/132",
+      "request_body": "{\"data\":{\"id\":\"132\",\"type\":\"elections\",\"attributes\":{\"name\":\"Example Election\"}}}",
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":{\"id\":\"132\",\"type\":\"elections\",\"links\":{\"self\":\"http://example.org/v1/elections/132\"},\"attributes\":{\"name\":\"Example Election\",\"start-at\":\"2015-10-19T00:50:41.238Z\",\"end-at\":\"2015-10-26T00:50:41.238Z\"},\"relationships\":{\"user\":{\"links\":{\"self\":\"http://example.org/v1/elections/132/relationships/user\",\"related\":\"http://example.org/v1/elections/132/user\"}}}}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

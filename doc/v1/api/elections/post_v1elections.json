@@ -1,0 +1,56 @@
+{
+  "resource": "Elections",
+  "http_method": "POST",
+  "route": "/v1/elections",
+  "description": "POST /v1/elections",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "type",
+      "description": "      The type of the resource. Must be elections.\n"
+    },
+    {
+      "scope": "attributes",
+      "required": true,
+      "name": "name",
+      "description": "      The name of the election.\n"
+    },
+    {
+      "scope": "attributes",
+      "required": true,
+      "name": "start-at",
+      "description": "      Start of the Election\n"
+    },
+    {
+      "scope": "attributes",
+      "required": true,
+      "name": "end-at",
+      "description": "      End of the Elections\n"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/v1/elections",
+      "request_body": "{\"data\":{\"type\":\"elections\",\"attributes\":{\"name\":\"Example Election\",\"start-at\":\"2015-10-19T00:50:41.460Z\",\"end-at\":\"2015-10-26T00:50:41.460Z\"}}}",
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\"data\":{\"id\":\"130\",\"type\":\"elections\",\"links\":{\"self\":\"http://example.org/v1/elections/130\"},\"attributes\":{\"name\":\"Example Election\",\"start-at\":\"2015-10-19T00:50:41.460Z\",\"end-at\":\"2015-10-26T00:50:41.460Z\"},\"relationships\":{\"user\":{\"links\":{\"self\":\"http://example.org/v1/elections/130/relationships/user\",\"related\":\"http://example.org/v1/elections/130/user\"}}}}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}
