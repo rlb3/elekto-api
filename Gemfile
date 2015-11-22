@@ -39,3 +39,4 @@ end
 gem 'doorkeeper'
 gem 'jsonapi-resources'
 gem 'apitome'
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
